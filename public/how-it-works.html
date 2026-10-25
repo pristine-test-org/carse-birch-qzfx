@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Carse Birch works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: #2f7d4f; }
+      /* Intentional, for Impeccable's test drive: hard-coded colour outside the site's palette. */
+      .mark { font-weight: 700; color: #c2185b; }
+      main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem);
+        margin: 2rem 0 1rem;
+        background: linear-gradient(90deg, #2f7d4f, #3b6fd4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .flush { margin: 0; padding: 0; line-height: 1.6; max-width: none; }
+      /* Intentional, for Impeccable's test drive: low-contrast text, light grey on near-white. */
+      .note { color: #c8c8c4; line-height: 1.6; }
+      .steps { padding-left: 1.2rem; line-height: 1.8; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .more { font-size: 10px; color: #2f7d4f; }
+      /* Intentional, for Impeccable's test drive: transition on a layout property. */
+      .bar { height: 0.6rem; width: 40%; background: #2f7d4f; border-radius: 0.3rem; transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      .tiers { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+      .tiers th, .tiers td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="mark">Carse Birch</span>
+      <a href="/">Back to the landing page</a>
+    </header>
+    <p class="flush">Carse Birch keeps one shared list for your whole team, so everyone sees the same tasks in the same order, the moment they change.</p>
+    <main>
+      <h1>How Carse Birch works</h1>
+      <ol class="steps">
+        <li>Add a task and it lands at the top of the shared list.</li>
+        <li>Teammates see it appear without refreshing the page.</li>
+        <li>Tick it off and it stays on the list, marked done, for the week.</li>
+      </ol>
+      <div class="bar" role="img" aria-label="Most of this week's tasks are done"></div>
+      <p class="note">Lists keep the five newest tasks in view, and older ones are archived after seven days.</p>
+      <table class="tiers">
+        <thead><tr><th>Plan</th><th>Lists</th><th>Teammates</th></tr></thead>
+        <tbody>
+          <tr><td>Starter</td><td>1</td><td>3</td></tr>
+          <tr><td>Team</td><td>10</td><td>25</td></tr>
+        </tbody>
+      </table>
+      <a class="more" href="/#live">See the live list</a>
+    </main>
+    <footer>Carse Birch · one page, one shared list</footer>
+  </body>
+</html>
